@@ -1,0 +1,37 @@
+{
+    "version": 1,
+    "request": {
+        "url": "https://api.themoviedb.org/3/search/person",
+        "method": "GET",
+        "params": {
+            "query": true
+        },
+        "authorization": {
+            "type": "QueryParam",
+            "keyParam": "api_key"
+        }
+    },
+    "response": {
+        "ctype": "application/json",
+        "tablePath": "$.results[*]",
+        "schema": {
+            "gender": {
+                "target": "$.gender",
+                "type": "int"
+            },
+            "name": {
+                "target": "$.name",
+                "type": "string"
+            },
+            "known_for": {
+                "target": "$.known_for[*].title",
+                "type": "object"
+            },
+            "popularity": {
+                "target": "$.popularity",
+                "type": "float"
+            }
+        },
+        "orient": "records"
+    }
+}
