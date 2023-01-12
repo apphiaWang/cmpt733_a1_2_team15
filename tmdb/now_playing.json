@@ -4,15 +4,14 @@
         "url": "https://api.themoviedb.org/3/movie/now_playing",
         "method": "GET",
         "params": {
-            "api_key": true,
             "language": false,
             "page": false,
             "region": false
+        },
+        "authorization": {
+            "type": "QueryParam",
+            "keyParam": "api_key"
         }
-    },
-    "examples": {
-        "api_key": "'af093fe5ad9cc1c2125e2464c51b4edd'",
-        "region": "'CA'"
     },
     "response": {
         "ctype": "application/json",
@@ -34,6 +33,7 @@
                 "target": "$.vote_average",
                 "type": "float"
             }
-        }
+        },
+        "orient": "records"
     }
 }
