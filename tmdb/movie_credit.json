@@ -23,6 +23,14 @@
                 "target": "$.title",
                 "type": "string"
             },
+            "genre_ids": {
+                "target": "$.genre_ids",
+                "type": "list"
+            },
+            "vote_average": {
+                "target": "$.vote_average",
+                "type": "float"
+            },
             "overview": {
                 "target": "$.overview",
                 "type": "string"

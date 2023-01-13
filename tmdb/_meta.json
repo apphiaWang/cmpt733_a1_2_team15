@@ -3,6 +3,8 @@
         "now_playing",
         "movie_genres",
         "search_movies",
-        "search_person"
+        "search_person",
+        "movie_credit",
+        "movie_details"
     ]
 }
