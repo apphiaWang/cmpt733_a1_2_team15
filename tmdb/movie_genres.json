@@ -13,11 +13,15 @@
     },
     "response": {
         "ctype": "application/json",
-        "tablePath": "$",
+        "tablePath": "$.genres[*]",
         "schema": {
-            "genres": {
-                "target": "$.genres",
-                "type": "list"
+            "id": {
+                "target": "$.id",
+                "type": "int"
+            },
+            "name": {
+                "target": "$.name",
+                "type": "string"
             }
         },
         "orient": "records"

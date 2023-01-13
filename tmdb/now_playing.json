@@ -35,14 +35,6 @@
                 "target": "$.genre_ids",
                 "type": "list"
             },
-            "overview": {
-                "target": "$.overview",
-                "type": "string"
-            },
-            "original_language": {
-                "target": "$.original_language",
-                "type": "string"
-            },
             "popularity": {
                 "target": "$.popularity",
                 "type": "int"
@@ -54,10 +46,6 @@
             "vote_count": {
                 "target": "$.vote_count",
                 "type": "int"
-            },
-            "is_adult": {
-                "target": "$.adult",
-                "type": "boolean"
             }
         },
         "orient": "records"
