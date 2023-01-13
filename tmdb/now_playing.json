@@ -11,27 +11,41 @@
         "authorization": {
             "type": "QueryParam",
             "keyParam": "api_key"
+        },
+        "pagination": {
+            "type": "offset",
+            "offsetKey": "offset",
+            "limitKey": "count",
+            "maxCount": 50
         }
     },
     "response": {
         "ctype": "application/json",
         "tablePath": "$.results[*]",
         "schema": {
-            "release_date": {
-                "target": "$.release_date",
-                "type": "string"
-            },
             "title": {
                 "target": "$.title",
                 "type": "string"
             },
-            "vote_count": {
-                "target": "$.vote_count",
+            "release_date": {
+                "target": "$.release_date",
+                "type": "string"
+            },
+            "genre_ids": {
+                "target": "$.genre_ids",
+                "type": "list"
+            },
+            "popularity": {
+                "target": "$.popularity",
                 "type": "int"
             },
             "vote_average": {
                 "target": "$.vote_average",
                 "type": "float"
+            },
+            "vote_count": {
+                "target": "$.vote_count",
+                "type": "int"
             }
         },
         "orient": "records"

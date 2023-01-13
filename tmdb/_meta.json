@@ -1,5 +1,8 @@
 {
     "tables": [
-        "now_playing"
+        "now_playing",
+        "movie_genres",
+        "search_movies",
+        "search_person"
     ]
 }
