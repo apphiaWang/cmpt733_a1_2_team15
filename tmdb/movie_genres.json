@@ -1,0 +1,25 @@
+{
+    "version": 1,
+    "request": {
+        "url": "https://api.themoviedb.org/3/genre/movie/list",
+        "method": "GET",
+        "params": {
+            "language": false
+        },
+        "authorization": {
+            "type": "QueryParam",
+            "keyParam": "api_key"
+        }   
+    },
+    "response": {
+        "ctype": "application/json",
+        "tablePath": "$",
+        "schema": {
+            "genres": {
+                "target": "$.genres",
+                "type": "list"
+            }
+        },
+        "orient": "records"
+    }
+}
