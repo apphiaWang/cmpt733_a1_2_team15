@@ -1,10 +1,10 @@
 {
     "version": 1,
     "request": {
-        "url": "https://api.themoviedb.org/3/search/person",
+        "url": "https://api.themoviedb.org/3/person/{person_id}/movie_credits",
         "method": "GET",
         "params": {
-            "query": true
+            "person_id": true
         },
         "authorization": {
             "type": "QueryParam",
@@ -13,23 +13,27 @@
     },
     "response": {
         "ctype": "application/json",
-        "tablePath": "$.results[*]",
+        "tablePath": "$.cast[*]",
         "schema": {
-            "gender": {
-                "target": "$.gender",
-                "type": "int"
-            },
-            "name": {
-                "target": "$.name",
-                "type": "string"
-            },
-            "id": {
+            "movie_id": {
                 "target": "$.id",
                 "type": "int"
+            },
+            "title": {
+                "target": "$.title",
+                "type": "string"
+            },
+            "overview": {
+                "target": "$.overview",
+                "type": "string"
             },
             "popularity": {
                 "target": "$.popularity",
                 "type": "float"
+            },
+            "release_date": {
+                "target": "$.release_date",
+                "type": "string"
             }
         },
         "orient": "records"
